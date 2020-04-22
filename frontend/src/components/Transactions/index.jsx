@@ -36,6 +36,7 @@ const Transactions = () => {
         <Spinner />
       ) : (
         <Container>
+          <h2>Current balance: ${balance}</h2>
           {historical.map((t, i) => <Transaction key={`tran${i}`} {...t} />)}
         </Container>
         
