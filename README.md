@@ -12,6 +12,15 @@
 ### Backend routes
 - GET http://localhost:3001  
 This endpoint will return the current balance of the account
+Response format: 
+```js
+{
+    "statusCode": 200,
+    "type": "success",
+    "data": 100,
+    "message": "Current balance"
+}
+```
 
 - GET http://localhost:3001/transactions  
 This endpoint will return historical transaction data  
