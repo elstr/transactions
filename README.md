@@ -10,16 +10,16 @@
 4) backend will be running in `http://localhost:3001`
 
 ### Backend routes
-- GET http://localhost:3001
+- GET http://localhost:3001  
 This endpoint will return the current balance of the acount
 
-- GET http://localhost:3001/transactions
+- GET http://localhost:3001/transactions  
 This endpoint will return historical transaction data 
 
-- GET http://localhost:3001/transactions/:id
+- GET http://localhost:3001/transactions/:id  
 This endpoint will return specific data for the given transaction
 
-- POST http://localhost:3001/transactions
+- POST http://localhost:3001/transactions  
 Required body:
 ```js
 {
