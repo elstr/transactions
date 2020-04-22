@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import {Container } from "./styles"
+import { Container } from "./styles";
 import { fetchHistory, fetchBalance } from "../../helpers/api";
 
 import Transaction from "../Transaction";
-import Spinner from "../Spinner"
+import Spinner from "../Spinner";
 
 const Transactions = () => {
   const [loading, setLoading] = useState(true);
@@ -37,9 +37,12 @@ const Transactions = () => {
       ) : (
         <Container>
           <h2>Current balance: ${balance}</h2>
-          {historical.map((t, i) => <Transaction key={`tran${i}`} {...t} />)}
+          {historical.length === 0 ? (
+            <p>No transactions have been made yet</p>
+          ) : (
+            historical.map((t, i) => <Transaction key={`tran${i}`} {...t} />)
+          )}
         </Container>
-        
       )}
     </>
   );
